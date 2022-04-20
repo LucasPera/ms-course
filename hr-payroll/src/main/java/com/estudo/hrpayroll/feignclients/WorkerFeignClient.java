@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.estudo.hrpayroll.entities.Worker;
 
 @Component //é um componente gerenciado pelo spring
-@FeignClient(name = "hr-worker", url = "localhost:8001", path = "/workers") //conecta ao outro microserviço
+@FeignClient(name = "hr-worker", path = "/workers") //conecta ao outro microserviço
 public interface WorkerFeignClient {
 	
 	@GetMapping(value = "/{id}")
